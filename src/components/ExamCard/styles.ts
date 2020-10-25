@@ -2,10 +2,9 @@ import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: '#F2AB27',
-        width: 90,
-        height: 90,
+        backgroundColor: '#F2E2C4',
         borderRadius: 5,
+        padding: 10,
         shadowColor: "#000",
         shadowOffset: {
             width: 0,
@@ -20,22 +19,12 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         marginRight: 10
     },
-    header: {
-        flexDirection: 'row',
-        alignItems: 'center',
-        justifyContent: 'space-around'
-    },
-    dayMonth: {
-        fontFamily: 'Ubuntu_500Medium',
-        color: '#FFF',
-        fontSize: 40
-    },
-    dayLabel: {
-        fontFamily: 'Ubuntu_500Medium',
-        color: '#FFF',
-        fontSize: 16
-    },
+    text: {
 
+    },
+    dateContainer: {
+        
+    }
 })
 
 export default styles;
