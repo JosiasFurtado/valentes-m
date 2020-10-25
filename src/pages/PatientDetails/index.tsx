@@ -77,7 +77,7 @@ const PatientDetails: React.FC<PatientDetailsProps> = ({ route }) => {
                 </View>
 
                 <View style={{ flexDirection: 'row', alignItems: 'center', alignSelf: 'flex-end', marginTop: 50 }}>
-                    <Text style={{...style.age, marginTop: -2, marginRight: 5}}>ver resultado</Text>
+                    <Text style={{...style.age, marginTop: -2, marginRight: 5}}>ver detalhado</Text>
                     <Feather name="arrow-right" size={20} color="black" />
                 </View>
             </View>
