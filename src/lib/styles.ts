@@ -94,6 +94,9 @@ const { tailwind, getColor } = create({
   },
   'bg-orange-2': {
     backgroundColor: '#F2B441'
+  },
+  'bg-yellow-2': {
+    backgroundColor: '#F2D090'
   }
 })
 export { tailwind, getColor }
