@@ -1,14 +1,19 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableHighlight } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 import style from './styles'
+import { useNavigation } from '@react-navigation/native';
 
 const GoBackHeader: React.FC = () => {
+  const { goBack } = useNavigation();
+
   return (
     <View style={{ alignItems: 'center', flexDirection: 'row' }}>
-      <Feather name="corner-up-left" size={30} color="black" styles={{marginLeft: -10}}/>
-      <Text style={style.goBackText}>Voltar</Text>  
+      <TouchableHighlight onPress={() => goBack()} underlayColor="#F3EDE0">
+        <Feather name="corner-up-left" size={30} color="black" styles={{ marginLeft: -10 }} />
+      </TouchableHighlight>
+      <Text style={style.goBackText}>Voltar</Text>
     </View>
   );
 }
