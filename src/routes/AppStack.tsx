@@ -6,6 +6,8 @@ import Login from '../pages/Login';
 import AppLoading from '../pages/AppLoading';
 import Home from '../pages/Home';
 import PatientDetails from '../pages/PatientDetails';
+import History from '../pages/History';
+
 
 const { Screen, Navigator } = createStackNavigator();
 
@@ -17,6 +19,8 @@ function AppStack() {
                 <Screen name="AppLoading" component={AppLoading} />
                 <Screen name="Home" component={Home} />
                 <Screen name="PatientDetails" component={PatientDetails} />
+                <Screen name="History" component={History} />
+
             </Navigator>
         </NavigationContainer>
     )
