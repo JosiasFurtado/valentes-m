@@ -1,7 +1,6 @@
-import React, { Dispatch, SetStateAction, useState } from 'react'
-import { Modal, StyleProp, TouchableHighlight, View, Text, ViewStyle, Image, TouchableOpacity } from 'react-native'
+import React, { Dispatch, SetStateAction } from 'react'
+import { Modal, StyleProp, TouchableHighlight, View, Text, ViewStyle, Image } from 'react-native'
 import { Feather } from '@expo/vector-icons';
-import DateTimePicker from '@react-native-community/datetimepicker';
 import Input from '../Input'
 import miniLogo from '../../../assets/mini-logo.png'
 
@@ -9,7 +8,6 @@ import style from './styles'
 import { tailwind } from '../../lib/styles';
 import PrimaryButton from '../PrimaryButton';
 import { useNavigation } from '@react-navigation/native';
-import moment from 'moment';
 
 interface LoginModalProps {
   readonly styles?: StyleProp<ViewStyle>
@@ -19,27 +17,10 @@ interface LoginModalProps {
 
 const LoginModal: React.FC<LoginModalProps> = ({ styles, modalVisible, setModalVisible }) => {
   const { navigate } = useNavigation();
-  const [showDatePicker, setShowDatePicker] = useState(false)
-  const [actualDate, setActualDate] = useState(new Date(1598051730000))
-  const [date, setDate] = useState({ paciente: '', medico: '' });
-  const [typeDate, setTypeDate] = useState('')
 
   const handleNavigateToHome = () => {
     setModalVisible(!modalVisible)
     navigate('Home')
-  }
-
-  const onChangeDate = (_: any, selectedDate: Date) => {
-    setActualDate(selectedDate)
-    if (typeDate === 'paciente') {
-      return setDate({ paciente: moment(actualDate).format('L'), medico: date.medico })
-    }
-    return setDate({ paciente: date.paciente, medico: moment(actualDate).format('L') })
-  }
-
-  const openDatePicker = (type: string) => {
-    setTypeDate(type)
-    setShowDatePicker(!showDatePicker)
   }
 
   return (

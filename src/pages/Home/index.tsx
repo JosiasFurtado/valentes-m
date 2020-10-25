@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, ScrollView, TouchableHighlight, Image, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 import Header from '../../components/Header';
@@ -7,6 +7,8 @@ import Header from '../../components/Header';
 import style from './styles';
 import { tailwind } from '../../lib/styles';
 import Input from '../../components/Input';
+import FloatButton from '../../components/FloatButton';
+import { useNavigation } from '@react-navigation/native';
 
 const mockData = [
   {
@@ -38,6 +40,7 @@ const mockData = [
   }
 ]
 const Home: React.FC = () => {
+  const { navigate } = useNavigation()
   return (
     <View style={[style.container, tailwind('relative')]}>
       <Header />
@@ -77,7 +80,7 @@ const Home: React.FC = () => {
                 <Text style={tailwind('text-gray-800')}>{item.hospital}</Text>
               </View>
               <View style={tailwind('-mt-4')}>
-                <TouchableOpacity style={tailwind('items-end mb-1')}>
+                <TouchableOpacity onPress={() => navigate('PatientDetails', { patient: item })} style={tailwind('items-end mb-1')}>
                   <Feather name="arrow-right" size={24} color="#B66604" />
                 </TouchableOpacity>
                 <View style={[{ backgroundColor: "#B66604" }, tailwind('h-px')]} />
@@ -86,6 +89,7 @@ const Home: React.FC = () => {
           </View>
         ))}
       </View>
+      <FloatButton onPress={() => { }} />
     </View>
   );
 }
