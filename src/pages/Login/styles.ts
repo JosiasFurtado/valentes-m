@@ -4,14 +4,15 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#F2B441',
         flex: 1,
-        padding: 20
+        padding: 20,
     },
     image: {
         alignItems: 'center',
         justifyContent: 'center'
     },
     content: {
-        flex: 1
+        flex: 1,
+        marginTop: 80
     },
     contentText: {
         marginBottom: 40,

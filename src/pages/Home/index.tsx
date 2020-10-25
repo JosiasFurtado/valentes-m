@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { View, Text, TouchableOpacity } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
@@ -9,6 +9,8 @@ import { tailwind } from '../../lib/styles';
 import Input from '../../components/Input';
 import FloatButton from '../../components/FloatButton';
 import { useNavigation } from '@react-navigation/native';
+import BottomTab from '../../components/BottomTab';
+import MenuModal from '../../components/MenuModal';
 
 const mockData = [
   {
@@ -41,9 +43,16 @@ const mockData = [
 ]
 const Home: React.FC = () => {
   const { navigate } = useNavigation()
+  const [modalVisible, setmodalVisible] = useState(false)
+
+
+  const setModalVisible = () => {
+    setmodalVisible(!modalVisible)
+  }
+
   return (
     <View style={[style.container, tailwind('relative')]}>
-      <Header />
+      <Header onPress={setModalVisible}/>
       <Text style={style.title}>Encontre seu paciente</Text>
       <View style={tailwind('relative')}>
         <Input
@@ -89,7 +98,9 @@ const Home: React.FC = () => {
           </View>
         ))}
       </View>
+      <BottomTab/>
       <FloatButton onPress={() => { }} />
+      <MenuModal modalVisible={modalVisible} setModalVisible={setModalVisible} />
     </View>
   );
 }
