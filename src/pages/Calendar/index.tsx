@@ -9,7 +9,7 @@ import FloatButton from '../../components/FloatButton';
 const Calendar: React.FC = () => {
 
   return (
-    <SafeAreaView style={tailwind('flex-1 bg-primary-500')}>
+    <SafeAreaView style={tailwind('flex-1 bg-primary-500 mt-4')}>
       <View style={tailwind('items-center mt-6')}>
         <View style={tailwind('flex-row items-center justify-around w-full')}>
           <Feather name="arrow-left" size={24} color={getColor('orange-2')} />
