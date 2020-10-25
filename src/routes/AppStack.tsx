@@ -8,7 +8,6 @@ import Home from '../pages/Home';
 import PatientDetails from '../pages/PatientDetails';
 import History from '../pages/History';
 
-
 const { Screen, Navigator } = createStackNavigator();
 
 function AppStack() {
@@ -20,7 +19,6 @@ function AppStack() {
                 <Screen name="Home" component={Home} />
                 <Screen name="PatientDetails" component={PatientDetails} />
                 <Screen name="History" component={History} />
-
             </Navigator>
         </NavigationContainer>
     )

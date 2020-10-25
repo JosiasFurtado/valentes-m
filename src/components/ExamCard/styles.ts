@@ -23,7 +23,15 @@ const styles = StyleSheet.create({
 
     },
     dateContainer: {
-        
+        backgroundColor: '#F2B441',
+        padding: 2,
+        paddingRight: 15,
+        paddingLeft: 15,
+        borderRadius: 5,
+        position: 'absolute',
+        right: -10,
+        bottom: 16,
+        fontFamily: 'Ubuntu_400Regular',     
     }
 })
 
