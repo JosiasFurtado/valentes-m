@@ -17,7 +17,7 @@ const MenuModal: React.FC<MenuModalProps> = ({ modalVisible, setModalVisible }) 
   
   function handleNavigateToLanding() {
     setModalVisible(!modalVisible)
-    navigate('Landing')
+    navigate('Login')
   }
 
   return (
