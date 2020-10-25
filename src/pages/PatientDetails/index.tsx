@@ -1,9 +1,11 @@
 import React from 'react'
 import { SafeAreaView, Text, View, Image } from 'react-native'
 import { Patient } from '../../@types/app'
+
 import BottomTab from '../../components/BottomTab'
 import FloatButton from '../../components/FloatButton'
 import GoBackHeader from '../../components/GoBackHeader'
+
 
 import { tailwind } from '../../lib/styles'
 import style from './styles'

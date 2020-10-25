@@ -31,6 +31,14 @@ const styles = StyleSheet.create({
         fontFamily: 'Ubuntu_400Regular',
         fontSize: 16,
         color: '#B66604'
+    },
+    sectionTitle: {
+        fontFamily: 'Ubuntu_500Medium',
+        fontSize: 18,
+        marginTop: 30
+    },
+    examResult: {
+
     }
 })
 
