@@ -101,7 +101,7 @@ const Home: React.FC = () => {
         </View>
       </View>
       <BottomTab />
-      <FloatButton onPress={() => { }} />
+      <FloatButton />
       <MenuModal modalVisible={modalVisible} setModalVisible={setModalVisible} />
     </View>
   );
