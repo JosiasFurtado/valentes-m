@@ -11,52 +11,52 @@ import style from './styles'
 import user from '../../../assets/children.png'
 
 interface PatientDetailsProps {
-    readonly route: {
-        params: {
-            patient: Patient
-        }
+  readonly route: {
+    params: {
+      patient: Patient
     }
+  }
 }
 
 const PatientDetails: React.FC<PatientDetailsProps> = ({ route }) => {
-    const { patient } = route.params
+  const { patient } = route.params
 
-    return (
-        <SafeAreaView style={tailwind('flex-1 bg-primary-500')}>
+  return (
+    <SafeAreaView style={tailwind('flex-1 bg-primary-500')}>
 
-            <View style={tailwind('py-10 px-8')}>
-                <GoBackHeader />
+      <View style={tailwind('py-10 px-8')}>
+        <GoBackHeader />
 
-                <View style={{ flexDirection: 'row', marginTop: 20, justifyContent: 'space-between'}}>
-                    <Image source={user} style={{ marginLeft: -20 }} />
+        <View style={{ flexDirection: 'row', marginTop: 20, justifyContent: 'space-between' }}>
+          <Image source={user} style={{ marginLeft: -20 }} />
 
-                    <View style={{ marginLeft: -12 }}>
-                        <Text style={style.name}>{patient.name}</Text>
-                        <Text style={style.age}>{patient.age}</Text>
-                        
-                        <View style={{...style.containerDiagnostic}}>
-                            <Text style={style.containerDiagnosticType}>Diagnóstico</Text>
-                            <Text style={{...style.containerDiagnosticType, color: '#333' }}>{patient.situation}</Text>
-                        </View>
-                    </View>
+          <View style={{ marginLeft: -12 }}>
+            <Text style={style.name}>{patient.name}</Text>
+            <Text style={style.age}>{patient.age}</Text>
 
-                    <View style={{marginLeft: 10}}>
-                        <Text style={style.protocol}>{patient.protocol}</Text>
-                        <View style={{...style.containerDiagnostic, marginTop: 42}}>
-                            <Text style={style.containerDiagnosticType}>Diagnosticado há</Text>
-                            <Text style={{...style.containerDiagnosticType, color: '#333' }}>{patient.time}</Text>
-                        </View>
-                    </View>
-                </View>
-
-                <View></View>
+            <View style={{ ...style.containerDiagnostic }}>
+              <Text style={style.containerDiagnosticType}>Diagnóstico</Text>
+              <Text style={{ ...style.containerDiagnosticType, color: '#333' }}>{patient.situation}</Text>
             </View>
+          </View>
 
-            <FloatButton onPress={() => { }} />
-            <BottomTab />
+          <View style={{ marginLeft: 10 }}>
+            <Text style={style.protocol}>{patient.protocol}</Text>
+            <View style={{ ...style.containerDiagnostic, marginTop: 42 }}>
+              <Text style={style.containerDiagnosticType}>Diagnosticado há</Text>
+              <Text style={{ ...style.containerDiagnosticType, color: '#333' }}>{patient.time}</Text>
+            </View>
+          </View>
+        </View>
 
-        </SafeAreaView>
-    )
+        <View></View>
+      </View>
+
+      <FloatButton />
+      <BottomTab />
+
+    </SafeAreaView>
+  )
 }
 
 PatientDetails.displayName = 'PatientDetails'
