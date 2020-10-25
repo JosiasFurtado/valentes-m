@@ -58,7 +58,7 @@ const Home: React.FC = () => {
         <View style={tailwind('relative')}>
           <Input
             label='Pesquisar'
-            type="password"
+            type="none"
             keyboardtype="default"
             maxlength={10}
           />
