@@ -15,7 +15,7 @@ const NewFeedback: React.FC<NewFeedbackProps> = () => {
         <View style={tailwind('bg-yellow-2 items-center px-4 w-11/12 rounded-lg py-3')}>
           <Text style={tailwind('text-gray-800 text-2xl')}>Aqui você pode adicionar as informações da consulta de hoje.</Text>
           <Image source={person} style={tailwind('mb-4')} />
-          <TouchableHighlight style={tailwind('bg-orange-2 shadow-md px-8 py-2 rounded')} onPress={() => { }}>
+          <TouchableHighlight underlayColor="#F2B441" style={tailwind('bg-orange-2 shadow-md px-8 py-2 rounded')} onPress={() => { }}>
             <Text style={tailwind('text-white text-lg')}>Começar</Text>
           </TouchableHighlight>
         </View>
