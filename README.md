@@ -8,6 +8,13 @@
 ## Info
  Projeto multiplataforma feito utilizando Expo com Typescript para o Hackathon Saúde Infantil.
  
+ 
+### Outros repositórios
+[App Valentes para pacientes](https://github.com/bkkater/valentes-mobile)
+
+[Backend da aplicação](https://github.com/JosiasFurtado/valentes-back)
+
+
 
 **Para testar, siga os passos abaixo**
 
